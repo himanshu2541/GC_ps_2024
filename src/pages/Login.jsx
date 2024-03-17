@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Heading1, Input, Button } from "../components";
 import { useForm } from "react-hook-form";
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
 
       <div className=" col-span-1 w-full h-full">
         <div className="flex flex-col gap-4 p-12">
-          <Heading1 title="Welcome to KGPLAY" subtitle="Sign In"  className={'text-white'}/>
+          <Heading1 title="Welcome to KGPLAY" subtitle="Sign In"  className={'text-white text-4xl'}/>
           <Input
             id="email"
             label="Email"
@@ -43,6 +44,11 @@ const Login = () => {
             required
           /> 
           <Button label={'Login'} onClick={handleSubmit((data) => console.log(data))} />
+          <hr />
+          <div className="text-center">
+            <span className="text-neutral-500 font-normal">Don{"'"}t have an account? </span>
+            <Link to='/register' className="text-primary-red font-medium hover:underline">Register</Link>
+        </div>
         </div>
       </div>
 

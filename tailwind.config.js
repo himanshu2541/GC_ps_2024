@@ -11,7 +11,7 @@ export default {
           "light": "#F1F2EB",
           "orange": "#FF7853",
         },
-        "primary-black": "#191917",
+        "primary-black": "#0d0f14",
         "primary-red": "#A50F01",
       }
 

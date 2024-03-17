@@ -7,6 +7,9 @@ const Input = ({
   required,
   register,
   errors,
+  autocomplete='off',
+  inputStyles,
+  labelStyles
 }) => {
   return (
     <div className='w-full relative'>
@@ -14,6 +17,7 @@ const Input = ({
         id={id}
         {...register(id, { required })}
         placeholder=" "
+        autoComplete={autocomplete}
         type={type}
         className={`
           peer
@@ -21,7 +25,6 @@ const Input = ({
           p-4
           pt-6
           font-light
-          bg-white
           border-2
           rounded-md
           outline-none
@@ -33,6 +36,7 @@ const Input = ({
               ? "border-rose-500 focus:border-rose-500"
               : "border-neutral-300 focus:border-primary-red"
           }
+          ${inputStyles}
         `}
       />
       <label
@@ -52,6 +56,7 @@ const Input = ({
           left-3
 
           ${errors[id] ? "text-rose-500" : "text-zinc-400"}
+          ${labelStyles}
         `}
       >
         {label}
